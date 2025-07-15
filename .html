@@ -1,31 +1,16 @@
-  <style>
-    body {
-    }
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Bar Example</title>
+</head>
+<body style="text-align:center; margin-top:100px;">
 
-    .search-box {
-      text-align: center;
-    }
+  <h2>Search Something</h2>
 
-    input[type="text"] {
-      padding: 10px;
-      width: 300px;
-      font-size: 16px;
-      border: 2px solid #333;
-      border-radius: 5px;
-    }
+  <form action="https://www.google.com/search" method="GET" target="_blank">
+    <input type="text" name="q" placeholder="Search here..." style="padding: 10px; width: 300px;">
+    <button type="submit" style="padding: 10px;">Search</button>
+  </form>
 
-    input[type="submit"] {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-left: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-  </style>
+</body>
+</html>
