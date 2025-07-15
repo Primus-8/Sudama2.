@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Bar with JavaScript</title>
+  <style>
+    body {
+      background-color: #e0f7fa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .search-container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .search-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search something...">
+    <button onclick="search()">Search</button>
+  </div>
+
+  <script>
+    function search() {
+      const query = document.getElementById('searchInput').value.trim();
+
+      if (query === "") {
+        alert("Please enter something to search.");
+        return;
+      }
+
+      // Example action: open Google search with the query
+      const url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
